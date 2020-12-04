@@ -20,11 +20,8 @@ function searchByName(searchTerm) {
     searchTerm = upper(searchTerm)
     
     const names = stateArray.map(extractName).map(upper);
-    console.log(names);
     const index = names.findIndex(n => n.includes(searchTerm));
-    console.log(index);
     if (index >= 0) {
-        console.log(stateArray[index]);
         return stateArray[index];
     } else {
         return null;
